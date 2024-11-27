@@ -17,6 +17,9 @@ export class AppComponent {
     this.timestamp = new Date().toISOString();
     this.http.post("https://api.sheetbest.com/sheets/f6765ca4-93a9-4612-bf08-48fd77a5fa3e",
       {poop_date: this.timestamp}
-    ).subscribe();
+    ).subscribe({
+      next: () => alert("Le caca a bien été ajouté"),
+      error: (err) => console.error(err)
+    });
   }
 }
