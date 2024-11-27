@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mytracker';
+  timestamp: string;
+
+  updateTimestamp() {
+    this.timestamp = new Date().toISOString();
+  }
 }
