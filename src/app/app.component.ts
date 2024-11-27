@@ -19,7 +19,7 @@ export class AppComponent {
       {poop_date: this.timestamp}
     ).subscribe({
       next: () => alert("Le caca a bien été ajouté"),
-      error: (err) => console.error(err)
+      error: (err) => alert("Une erreur s'est produite")
     });
   }
 }
